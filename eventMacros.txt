@@ -1,0 +1,1758 @@
+ # Começa como aprendiz nivel 1 para se tornar gatuno só precisa criar o personagem.
+ 
+ # Automacros - Verificando quests - Checking quests
+ # deixei com nome de peco e yuno mas pode mudar tranquilamente
+ # recomendo nao mudar os locais de up mas caso queira, vai precisar mudar as placas de bounty também ou desativar
+ # para desativar basta colocar nas variaveis relacionadas a $bounty $bountyfim $bountymove e $bountynpc todas com "none"
+ 
+
+
+ automacro nivelcheck0 {
+	timeout 120
+	macro_delay 0.1
+	JobIDNot 0
+	NotInMap $lockmap
+	exclusive 1
+	priority -15
+	ConfigKeyNot virarArruaceiro true
+	overrideAI 0
+	BaseLevel 1..10
+	call {
+	$questhuntid = 62566 # id da quest da placa (não mudar caso não saiba o que fazer)
+	$questhuntmid = 1025 # monstro que a placa pede para matar
+	$questhuntmid2 = none # monstro secundario que vale a pena matar 
+	$nomemob = Boa # nome do mob a ser morto
+	$lockmap = pay_fild08 #mapa onde o monstro da placa está
+	$savemap = payon # mapa para salvar
+	$savemapkafra = 181 104 # coordenadas da kafra no $savemap
+	$bountymove = payon 148 94 # mover para perto da placa
+	$bountynpc = 148 95 r0 r2 r0 #conversa da placa para pegar quest
+	$bountyfim = 148 95 r1 r0 r2 # conversa da placa finalizada
+	$config = payon_in01 5 49 # npc tooldealer
+	$config2 = 0 # 0 ativa compra de itens, 1 desativa
+	call vaipeco # chamar configurações e salvar no mapa.
+	}		
+ }
+ automacro nivelcheck1 {
+	timeout 120
+	macro_delay 0.1
+	JobIDNot 0
+	NotInMap $lockmap
+	exclusive 1
+	priority -15
+	ConfigKeyNot virarArruaceiro true
+	overrideAI 0
+	BaseLevel 11..20
+	call {
+	$questhuntid = 62565 # id da quest da placa (não mudar caso não saiba o que fazer)
+	$questhuntmid = 1014 # monstro que a placa pede para matar
+	$questhuntmid2 = none # monstro secundario que vale a pena matar 
+	$nomemob = Spore # nome do mob a ser morto
+	$lockmap = pay_fild08 #mapa onde o monstro da placa está
+	$savemap = payon # mapa para salvar
+	$savemapkafra = 181 104 # coordenadas da kafra no $savemap
+	$bountymove = payon 148 94 # mover para perto da placa
+	$bountynpc = 148 95 r0 r1 r0 #conversa da placa para pegar quest
+	$bountyfim = 148 95 r1 r0 r1 # conversa da placa finalizada
+	$config = payon_in01 5 49 # npc tooldealer
+	$config2 = 0 # 0 ativa compra de itens, 1 desativa
+	call vaipeco # chamar configurações e salvar no mapa.
+	}		
+ }
+automacro nivelcheck2 {
+	timeout 120
+	macro_delay 0.1
+	JobIDNot 0
+	NotInMap $lockmap
+	exclusive 1
+	priority -15
+	ConfigKeyNot virarArruaceiro true
+	overrideAI 0
+	BaseLevel 21..40
+call {
+	$questhuntid = 62567 # id da quest da placa (não mudar caso não saiba o que fazer)
+	$questhuntmid = 1060 # monstro que a placa pede para matar
+	$questhuntmid2 = none # monstro secundario que vale a pena matar 
+	$nomemob = Bigfoot # nome do mob a ser morto
+	$lockmap = pay_fild07 #mapa onde o monstro da placa está
+	$savemap = payon # mapa para salvar
+	$savemapkafra = 181 104 # coordenadas da kafra no $savemap
+	$bountymove = payon 148 94 # mover para perto da placa
+	$bountynpc = 148 93 r0 r0 r0 #conversa da placa para pegar quest
+	$bountyfim = 148 93 r1 r0 r0 # conversa da placa finalizada
+	$config = payon_in01 5 49 # npc tooldealer
+	$config2 = 0 # ativa compra de itens
+	call vaipeco # chamar configurações e salvar no mapa.
+	}	
+}
+automacro nivelcheck3 {
+	timeout 120
+	macro_delay 0.1
+	JobIDNot 0
+	NotInMap $lockmap
+	exclusive 1
+	priority -15
+	ConfigKeyNot virarArruaceiro true
+	overrideAI 0
+	BaseLevel 41..60
+call {
+	$questhuntid = 62645 # id da quest da placa (não mudar caso não saiba o que fazer)
+	$questhuntmid = 1013 # monstro que a placa pede para matar
+	$questhuntmid2 = none # monstro secundario que vale a pena matar 
+	$nomemob = Wolf # nome do mob a ser morto
+	$lockmap = moc_fild03 #mapa onde o monstro da placa está
+	$savemap = payon # mapa para salvar
+	$savemapkafra = 181 104 # coordenadas da kafra no $savemap
+	$bountymove = payon 148 94 # mover para perto da placa
+	$bountynpc = 148 91 r0 r1 r0 #conversa da placa para pegar quest
+	$bountyfim = 148 91 r1 r0 r1 # conversa da placa finalizada
+	$config = payon_in01 5 49 # npc tooldealer
+	$config2 = 0 # ativa compra de itens
+	call vaipeco # chamar configurações e salvar no mapa.
+	}
+}
+automacro nivelcheck4 {
+	timeout 120
+	macro_delay 0.1
+	JobIDNot 0
+	NotInMap $lockmap
+	exclusive 1
+	priority -15
+	ConfigKeyNot virarArruaceiro true
+	overrideAI 0
+	BaseLevel 61..80
+call {
+	$questhuntid = 63343 # id da quest da placa (não mudar caso não saiba o que fazer)
+	$questhuntmid = 1127 # monstro que a placa pede para matar
+	$questhuntmid2 = none # monstro secundario que vale a pena matar 
+	$nomemob = Hode # nome do mob a ser morto
+	$lockmap = moc_fild17 #mapa onde o monstro da placa está
+	$savemap = morocc # mapa para salvar
+	$savemapkafra = 156 97 # coordenadas da kafra no $savemap
+	$bountymove = morocc 149 85 # mover para perto da placa
+	$bountynpc = 149 84 r0 r1 r0 #conversa da placa para pegar quest
+	$bountyfim = 149 84 r1 r1 r0 # conversa da placa finalizada
+	$config = moc_ruins 91 128 # npc tooldealer
+	$config2 = 0 # ativa compra de itens
+	call vaipeco # chamar configurações e salvar no mapa.
+	}
+}
+automacro nivelcheck5 {
+	timeout 120
+	macro_delay 0.1
+	JobIDNot 0
+	NotInMap $lockmap
+	exclusive 1
+	priority -15
+	ConfigKeyNot virarArruaceiro true
+	overrideAI 0
+	BaseLevel 81..90
+call {
+	$questhuntid = 62559 # id da quest da placa (não mudar caso não saiba o que fazer)
+	$questhuntmid = 1369 # monstro que a placa pede para matar
+	$questhuntmid2 = 1386 # monstro secundario que vale a pena matar 
+	$nomemob = Grand Peco # nome do mob a ser morto
+	$lockmap = yuno_fild09 #mapa onde o monstro da placa está
+	$savemap = aldebaran # mapa para salvar
+	$savemapkafra = 143 119 # coordenadas da kafra no $savemap
+	$bountymove = yuno 181 139 # mover para perto da placa
+	$bountynpc = 180 145 r0 r3 r0 #conversa da placa para pegar quest
+	$bountyfim = 180 145 r1 r0 r3 r0 # conversa da placa finalizada
+	$config = aldeba_in 94 56 # npc tooldealer
+	$config2 = 0 # ativa compra de itens
+	call vaipeco # chamar configurações e salvar no mapa.
+			}
+
+	
+		}
+ automacro nivelcheck6 {
+	timeout 120
+	macro_delay 0.1
+	JobIDNot 0
+	NotInMap $lockmap
+	exclusive 1
+	priority -15
+	ConfigKeyNot virarArruaceiro true
+	overrideAI 0
+	BaseLevel 91..98
+call {
+	$questhuntid = none # id da quest da placa (não mudar caso não saiba o que fazer)
+	$questhuntmid = 1680 # monstro que a placa pede para matar
+	$questhuntmid2 = 1627 # monstro secundario que vale a pena matar 
+	$nomemob = Hill Wind # nome do mob a ser morto
+	$lockmap = ra_fild08 #mapa onde o monstro da placa está
+	$savemap = rachel # mapa para salvar
+	$savemapkafra = 109 138 # coordenadas da kafra no $savemap
+	$bountymove = none # mover para perto da placa
+	$bountynpc = none #conversa da placa para pegar quest
+	$bountyfim = none  # conversa da placa finalizada
+	$config = ra_in01 257 269  # npc tooldealer
+	$config2 = 0 # ativa compra de itens
+	do mconf 1107 0 0 0
+	do mconf 2904 0 -12 0
+	do iconf 28382 30 1 0
+	do iconf 1695 30 1 0
+	call vaipeco # chamar configurações e salvar no mapa.
+	}
+}
+
+
+macro pegapeco {
+do move $bountymove
+do talknpc $bountynpc
+  
+
+}
+
+automacro sem_peco {
+JobIDNot 0
+timeout 10
+exclusive 1
+overrideAI 1
+priority -7
+ConfigKeyNot virarArruaceiro true
+QuestInactive $questhuntid
+call pegapeco
+}	
+
+
+ automacro novice {
+	JobID 0
+	exclusive 1
+	QuestInactive 11344
+	macro_delay 2
+	JobLevel 1..9
+	BaseLevel 1..9
+	run-once 1
+	call {
+	do conf autoTalkCont 1
+	do conf lockMap none
+	do conf statsAddAuto 1
+	do conf statsAddAuto_list 10 str, 10 dex, 10 agi, 20 str, 20 dex, 20 agi, 40 str, 40 agi, 30 dex, 60 agi, 50 dex, 50 str, 80 agi, 70 str, 90 agi, 70 dex
+	do conf statsAddAuto_dontUseBonus 1
+	do conf skillsAddAuto 1
+	do conf skillsAddAuto_list Basic Skill 9, Double Attack 10, Improve Dodge 10, Steal 10, Hiding 10, Envenom 9, Gank 10, Sword Mastery 10, Mug 2, Divest Helm 5, Divest Shield 3, Slyness 1, Haggle 5
+		do move 96 74
+		do move 125 257
+	do talknpc 100 39 c c r0 c c c c r4 r3 r2
+		do eq 2
+		do eq 3
+		do eq 4
+		do eq 5
+		do eq 6
+		do eq 7
+		do eq 8
+	do move 122 25
+	do move 59 135
+	do talknpc 52 136 c c r0 c c c r0 c c c c c c c c c c c c
+	do talknpc 49 134 c c c c c c c c c c c r1 c r1 c c c
+	do talknpc 55 134 c r0 c c c c r0 c c r4 c c
+	do talknpc 52 136 c c c
+		do eq Thief Manual
+	do talknpc 52 136 c c r0 c
+	do talknpc 49 134 c c c c c
+		do conf route_teleport 0
+	do talknpc 49 134 c r0
+		do a 0
+		do a 0
+		do sm 50 0 1
+		do sm 50 0 1
+		do sm 50 1 1
+		do a 1
+		do sm 50 1 1
+		do sm 50 1 1
+		do a 2
+		do sm 50 2 1
+		do sm 50 2 1
+	do move 50 134
+	do talknpc 49 134 c r0
+		do a 0
+		do sm 50 0 1
+		do a 0
+		do sm 50 0 1
+		do sm 50 0 1
+		do a 1
+		do sm 50 1 1
+		do sm 50 1 1
+	do move 50 134
+	do talknpc 49 134 c c c c c
+	do talknpc 55 134 c c c c c 
+	do talknpc 55 134 c c c c c r0 c c c c
+	do talknpc 55 134 c r0 c c c
+		do a 0
+		do sm 52 0 1
+		do sm 52 0 1
+		do sm 52 0 1
+		do sm 52 0 1
+		do sm 52 0 1
+		do sm 52 0 1
+		do a 1
+		do sm 52 1 1
+		do sm 52 1 1
+		do sm 52 1 1
+		do sm 52 1 1
+		do sm 52 1 1
+		do sm 52 1 1
+		do sm 52 1 1
+	do talknpc 55 134 c c c
+	do talknpc 49 134 c c c c c c c c c c c c c c r0 c c c c c r4 n
+	do talknpc 52 136 c c c c c c c c r4 n
+	do move 113 27
+	do move 55 78
+	do talknpc 59 83 c c r0 c r3 c c c r0 c c
+	do talknpc 59 83 c c r1 c
+	do mconf 1008 1 0 0 # Pupa
+	do mconf 2398 1 0 0 # little poring
+	do mconf 1063 1 0 0 # lunatic
+	do mconf 1002 1 0 0 # Poring
+	do mconf 1231 0 0 0 # Creamy(pupa)
+	do mconf 1018 0 0 0 # Creamy
+	do conf attackAuto_inLockOnly 1
+	log ================
+	log = Terminei a primeira parte, 
+	log = indo pegar Job 10 e Base 10
+	log ================
+
+		do conf lockMap prt_fild08a
+		do conf attackAuto 2
+		do conf route_randomWalk 1
+		do conf route_maxNpcTries 1
+	lock novice		
+	}
+
+}
+
+
+	automacro pupaquest {
+	QuestActive 11344
+	macro_delay 1
+	JobID 0
+	exclusive 1
+	run-once 1
+	JobLevel 10
+	call { 
+		log =================
+		log Estou job 10 indo virar Gatuno
+		log =================
+		do conf lockMap none
+		do conf attackAuto 1
+		do conf route_randomWalk 1
+		do conf route_maxNpcTries 1
+	do mconf 1008 0 0 0 # Pupa
+	do mconf 2398 0 0 0 # little poring
+	do mconf 1063 0 0 0 # lunatic
+	do mconf 1002 0 0 0 # Poring
+	do mconf 1231 0 0 0 # Creamy(pupa)
+	do mconf 1018 0 0 0 # Creamy
+		call acabouquest
+	}
+}
+
+
+
+
+
+macro acabouquest {
+	do conf lockMap none
+	do move 371 212
+	do move 125 257
+	do move 122 25
+	do move 59 135
+	do skills add 1
+	do skills add 1
+	do skills add 1
+	do skills add 1
+	do skills add 1
+	do skills add 1
+	do skills add 1
+	do skills add 1
+	do skills add 1
+	do talknpc 52 136 c r0 c c r0 c c
+	do eq Novice Main Gauche [3]
+	do move 113 27
+	do move 100 24
+	do move 21 99
+	
+
+}
+
+
+
+
+automacro startmacro {
+BaseLevel 1..60
+JobIDNot 0
+InMap payon
+run-once 1
+exclusive 1
+call {
+	do iconf all 0 0 1
+	do conf sellAuto_npc_steps 0
+	do conf minStorageZeny 1000
+	do conf autoTalkCont 1
+	do iconf Awakening Potion 0 0 0
+	do iconf Concentration Potion 0 0 0
+	do iconf Orange Potion 40 0 0
+	do iconf Red Potion 40 0 0
+	do iconf Butterfly Wing 10 0 0
+	do iconf Fly Wing 20 0 0
+	do mconf 3130 0 -14 0
+	do mconf 3131 0 -14 0
+   do mconf 1024 0 0 0
+   do mconf 1103 0 0 0
+   do mconf 1018 0 0 0
+   do mconf 1174 0 0 0
+   do mconf 1100 0 0 0
+   do mconf 1042 0 0 0
+   do mconf 1092 -1 1 0
+   do mconf 1080 -1 0 0
+      # pra nao pegar item dos outros no chao em todo mapa (salva tempo)
+	do conf itemsTakeAuto 1
+	do conf itemsGatherAuto 0
+      # pra nao pegar item dos outros no chao em todo mapa (salva tempo)
+	do conf attackAuto 2
+	do conf route_randomWalk 1
+	# Caso queria, edite a linha abaixo!
+	# If you want, edit the line bellow!
+	do conf statsAddAuto 1
+	do conf statsAddAuto_list 10 str, 10 dex, 10 agi, 20 str, 20 dex, 20 agi, 40 str, 40 agi, 30 dex, 60 agi, 50 dex, 50 str, 80 agi, 70 str, 90 agi, 70 dex
+	do conf statsAddAuto_dontUseBonus 1
+	# Gatuno? Thief?
+	do conf skillsAddAuto 1
+	do conf skillsAddAuto_list Basic Skill 9, Double Attack 10, Improve Dodge 10, Steal 10, Hiding 10, Envenom 9, Gank 10, Sword Mastery 10, Mug 2, Divest Helm 5, Divest Shield 3, Slyness 1, Haggle 5
+
+	}
+}
+
+
+automacro dmobs50 {
+	BaseLevel 61..99
+	run-once 1
+	priority 3
+	exclusive 1
+	delay 2
+	macro_delay 0.1
+	call {
+		log ===============================
+		log = removendo configuração de monstros
+		log = nivel 60 abaixo
+		log ===============================
+   	do conf lockMap_x none
+	do conf lockMap_y none
+   do mconf 1014 0 0 0
+   do mconf 1025 0 0 0
+   do mconf 1024 0 0 0
+   do mconf 1103 0 0 0
+   do mconf 1018 0 0 0
+   do mconf 1174 0 0 0
+   do mconf 1060 0 0 0
+   do mconf 1013 0 0 0
+   do mconf 1100 0 0 0
+   do mconf 1042 0 0 0
+   do mconf 1092 -1 1 0
+   do mconf 1080 -1 0 0
+   do conf autoTalkCont 1
+	}
+}
+
+
+
+################################################### Sobrepeso #################################################
+#entrar ilha das tartarugas
+
+automacro tur {
+	InMap tur_dun01
+	timeout 120
+	call {
+		do ss 51
+		do move tur_dun02
+	}
+}
+
+automacro tur_isl {
+	BaseLevel >= 92
+	timeout 60
+	ConfigKeyNot tur_isl true
+	call {
+
+		do move alberta_in 23 104
+		do talknpc 23 104 r1
+		do move alberta 247 119
+		do talknpc alberta 247 119 r1 r0
+		do conf -f tur_isl true
+}
+}
+
+#esse portal estava bugado e ficava dando loop por causa da rota passr por cima
+automacro portalalde {
+	IsInMapAndCoordinate aldebaran 197 68
+	priority -11
+	timeout 10
+	call { 
+		do move 206 62
+	}
+}
+
+automacro pesou {
+   CharCurrentWeight > 70%
+	ConfigKeyNot virarArruaceiro true
+   timeout 20
+   exclusive 1
+   macro_delay 0.5
+   call {
+   do autosell
+
+
+   }
+}
+
+automacro sempot {
+	CurrentHP <= 100
+	exclusive 1
+	JobIDNot 0
+	ConfigKeyNot virarArruaceiro true
+	run-once 1
+	delay 2
+	timeout 120
+	call {
+		if ($.zeny > 20000 && $.incity = 1 ) {
+			do autosell
+			release sempot
+		}
+		if ($.zeny < 10000 && $.incity = 1 && CurrentHP <= 10) {
+				do autosell
+				release sempot
+		}
+			
+	}
+}
+
+
+# call das quests (recomendo não bagunçar.)
+automacro questpeco {
+ConfigKeyNot virarArruaceiro true
+JobIDNot 0
+timeout 60
+priority -5
+exclusive 1
+macro_delay 0.1
+call {
+		if (&questCompleteCount($questhuntid) == 0) call fazendopeco 
+		if (&questCompleteCount($questhuntid) == 1) call fimpeco
+	}
+}
+
+# quest em andamento
+macro fazendopeco {
+log =====================================================
+log Quest Incompleta de id: $questhuntid Nome do monstro: $nomemob mobid: $questhuntmid
+log =====================================================
+}
+
+# Repetir quest
+macro fimpeco {
+	do reload porta
+log =======================
+log Quest Completa $nomemob
+log =======================
+do move $savemap $bountymove
+do talknpc $bountyfim
+pause 2
+do talknpc $bountynpc
+do conf -f tur_isl false
+do relog 10
+
+} 
+
+   automacro vaipeco {
+	ConfigKeyNot virarArruaceiro true
+	ConfigKeyNot yunosave $savemap
+   exclusive 1
+   timeout 60
+   priority -14
+   run-once 1
+   call salvayuno
+   } 
+ 
+macro salvayuno {
+    do conf route_avoidWalls 1
+   	do conf lockMap_x none
+	do conf lockMap_y none
+	do conf itemsTakeAuto 0
+	do move $savemap $savemapkafra
+	pause 1
+	do talknpc $savemapkafra r0
+	do conf -f salvayuno $savemap
+   release peco
+   pause 2
+}
+ 
+automacro peco {
+   InMap $savemap
+   ConfigKeyNot virarArruaceiro true
+   run-once 1
+   disabled 1
+   exclusive 1
+   call vaipeco
+}
+ 
+macro vaipeco {
+	set macro_delay 0.1
+   do conf route_randomWalk 1
+   do conf attackAuto 2
+   do conf storageAuto_npc $savemap $savemapkafra
+   do conf storageAuto 0
+   do conf sellAuto 1 
+   do conf sellAuto_npc $config
+   do conf buyflywing.npc $config
+   do conf buyflywing.minAmount 0 
+   do conf buyflywing.maxAmount 20 
+   do conf buybutterfly.npc $config
+   do conf buybutterfly.minAmount 0 
+   do conf buybutterfly.maxAmount 5 
+   do conf buyredpot.npc $config
+   do conf buyredpot.minAmount 0
+   do conf buyredpot.maxAmount 40
+   do conf buyorangepot.npc $config
+   do conf buyorangepot.minAmount 0 
+   do conf buyorangepot.maxAmount 40 
+   do conf buyawakpot.npc $config
+   do conf buyawakpot.minAmount 0 
+   do conf buyawakpot.maxAmount 10 
+   do conf buyorangepot.disabled $config2
+   do conf buyredpot.disabled $config2
+   do conf buywhitepot.disabled $config2
+   do conf buybutterfly.disabled $config2
+   do conf buyflywing.disabled $config2
+   do conf buyawakpot.disabled $config2
+   	do conf buywhitepot.npc $config
+	do conf buywhitepot.minAmount 0 
+	do conf buywhitepot.maxAmount 30 
+	do conf buywhitepot.disabled $config2
+   do conf storageAuto_npc_steps r1 r0  
+   do conf teleportAuto_minAggressivesInLock 3 
+   do conf route_teleport 0
+   do conf attackAuto_inLockOnly 0 
+   pause 5
+   do conf lockMap $lockmap
+   do conf lockMap_x none
+   do conf lockMap_y none
+   do mconf $questhuntmid 2 0 1 
+   do mconf $questhuntmid2 2 0 1 
+   do mconf all 0 0 0
+   do mconf 1321 1 0 0
+   do mconf 1256 1 0 0
+   do mconf 1314 1 0 0
+   do mconf 1162 1 0 0
+   do mconf 1215 1 0 0
+   do mconf 1378 1 0 0
+   do pconf 28705 2
+   do iconf 28705 0 1 0
+   do iconf 22083 0 1 0
+   do pconf 22083 2
+do conf storageAuto_npc_type 0
+   do pconf all 1 
+   
+}
+ 
+automacro pegounovenove {
+   BaseLevel 99
+   run-once 1
+   overrideAI 1
+   exclusive 1
+   call celebrate
+}
+ 
+macro celebrate {
+   do conf lockMap aldebaran
+   do conf lockMap_x 150
+   do conf lockMap_y 123
+   release sucesso
+}
+ 
+automacro sucesso {
+   InMap aldebaran
+   run-once 1
+   disabled 1
+   exclusive 1
+   call {
+   log 99 completed
+   do relog 999999999
+   }
+}
+
+
+
+
+#########################################################################################################################
+#########################################################################################################################
+#################################################### bagunceiro quest (corrigido bugs)###################################
+#########################################################################################################################
+#########################################################################################################################
+
+#By Gaspel
+#Edited- by CALF
+#convertido e reescrito pra eventMacro por Nipodemos
+#ajuste para IRO RESTART por lucasbradok
+#ajustes, falhas em npcs e atualizados locais de itens para o iRO por AkiraZ
+automacro virarArruaceiroInicio_Bugged {
+FreeSkillPoints > 0
+timeout 30
+JobLevel 50
+JobID 6
+exclusive 1
+call {
+log ===========================================
+log = Estou no lvl de virar bagunceiro, porem
+log = os pontos não estão distribuídos...
+log = tentando resolver isso
+log ===========================================
+do conf skillsAddAuto 1
+do conf skillsAddAuto_list NV_BASIC 9, TF_DOUBLE 10, TF_MISS 10, TF_STEAL 10, TF_HIDING 8, TF_POISON 10, TF_DETOXIFY 1, RG_SNATCHER 10, RG_STEALCOIN 10, RG_BACKSTAP 4, RG_TUNNELDRIVE 5, RG_RAID 5, RG_INTIMIDATE 5, RG_PLAGIARISM 10
+
+log ===========================================
+log =se isso estiver aparecendo repetidamente, a macro tem um bug
+log ===========================================
+
+}
+}
+
+
+automacro virarArruaceiroInicio_salvarEmMorocc {
+JobID 6 #gatuno
+JobLevel 50
+FreeSkillPoints 0
+priority -99
+disabled 0
+exclusive 1
+ConfigKeyNot saveMap morocc
+ConfigKeyNot In_saveMap_sequence true
+NpcNotNear /Arruaceira da Guilda/
+QuestInactive 2017
+QuestInactive 2018
+QuestInactive 2019
+QuestInactive 2020
+QuestInactive 2022
+QuestInactive 2023
+QuestInactive 2024
+QuestInactive 2026
+call {
+do conf route_teleport none
+do move morocc 155 98
+do talknpc 156 97 c r0 c
+do conf saveMap morocc
+do conf QuestPart none
+}
+}
+
+
+automacro virarArruaceiroInicio_IrNoNpc {
+JobID 6 #gatuno
+JobLevel 50
+FreeSkillPoints 0
+disabled 0
+priority 2
+exclusive 1
+ConfigKey saveMap morocc
+NpcNotNear /Rogue Guildsman/
+QuestInactive 2017
+QuestInactive 2018
+QuestInactive 2019
+QuestInactive 2020
+QuestInactive 2022
+QuestInactive 2023
+QuestInactive 2024
+QuestInactive 2026
+timeout 30
+call {
+			do conf autoTalkCont 1
+call pararDeAtacar
+do conf lockMap none
+do conf -f virarArruaceiro true
+do move in_rogue &rand(361,366) &rand(112,117)
+}
+}
+
+automacro c_arru {
+	QuestActive 2020,2019,2018,2017,2021
+	ConfigKey virarArruaceiro true
+	timeout 120
+	priority -5 #prioridade alta
+	exclusive 1
+	disabled 1
+	overrideAI 0
+	macro_delay 0.3
+	call { 
+		pause 5
+		$cyf = &invamount (Cyfar)
+		do conf route_maxWarpFee 1
+		if ($.zeny < 10000) { 
+			call semgrana			
+
+
+		}
+		if ($.zeny > 10000) { 
+			release virarArruaceiro_etapa3_coletarItens
+			release virarArruaceiro_etapa3_coletarItens2
+			release virarArruaceiro_etapa3_coletarItens3
+			do conf -f questArruaceiro pegarItens
+		do mconf 1317 0 0 0
+		do mconf 1073 0 0 0
+		do mconf 1391 0 0 0
+		do mconf 1266 0 0 0
+		do mconf 1074 0 0 0
+		do mconf 1313 0 0 0
+		do mconf 1254 0 0 0
+			log ===============================================
+			log ======= Conseguiu o zeny para quest, chamando quest. ========
+			log ===============================================
+			lock c_arru
+		}
+			
+			
+		if ($cyf > 25) {
+			do autosell
+			do conf route_maxWarpFee none
+		}
+	}
+}
+
+
+
+macro semgrana {
+			lock virarArruaceiro_etapa3_coletarItens3
+			lock virarArruaceiro_etapa3_coletarItens2
+			lock virarArruaceiro_etapa3_coletarItens
+			do conf lockMap cmd_fild07
+			do mconf 1317 0 0 0
+			do mconf 1323 0 0 0
+			do mconf 1073 1 0 0
+			do mconf 1391 1 0 0
+			do mconf 1266 1 0 0
+			do mconf 1074 1 0 0
+			do mconf 1313 1 0 0
+			do mconf 1254 1 0 0
+			do mconf all 0
+			do conf buyorangepot.disabled 1
+			do conf buyredpot.disabled 1
+			do conf buybutterfly.disabled 1
+			do conf buyflywing.disabled 1
+			do conf buyawakpot.disabled 1
+			do conf route_randomWalk 1
+			do pconf all 1
+			do conf route_maxWarpFee 60
+			log ==========================================================
+			log ======== Ainda sem zeny suficiente, continuar indo pegar cyfar.=======
+			log ==========================================================
+		}
+
+automacro virarArruaceiroInicio {
+JobID 6 #gatuno
+JobLevel 50
+priority 2
+exclusive 1
+disabled 0
+
+NpcNear /Rogue Guildsman/
+QuestInactive 2017
+QuestInactive 2018
+QuestInactive 2022
+QuestInactive 2023
+QuestInactive 2024
+QuestInactive 2026
+QuestInactive 2020
+QuestInactive 2019
+call {
+do talknpc 363 122  c c c c c c r0 c c c c r0 c c c c c c r0 c c c c c r2 c c c c c c c r3 c c c c c r1 c c c c c c r3 c c c c c c r2 c c c c c r1 c c c c c r0 c c c r1 c c c  #Arruaceira da Guilda
+}
+}
+
+
+automacro virarArruaceiro_etapa2_FalarComSmith {
+JobID 6 #gatuno
+QuestActive 2017
+exclusive 1
+call {
+do move in_rogue &rand(370,373) &rand(20,24)
+do talknpc 376 23 c c c c  #&npc ( 376 23 ) #Smith
+do conf -f questArruaceiro pegarItens
+}
+}
+
+
+
+
+automacro virarArruaceiro_etapa3_coletarItens {
+JobID 6 #gatuno
+QuestActive 2018
+exclusive 1
+ConfigKeyNot questArruaceiro peguei
+timeout 100
+call  {
+do pconf all 1
+do iconf 510 7 1 0 #ervaAzul
+do iconf 957 10 1 0 #unhaApodrecida
+do iconf 932 10 1 0 #osso
+do iconf 958 10 1 0 #mandibula
+$ervaAzul       = &invamount (Erva Azul)
+$unhaApodrecida = &invamount (Unha Apodrecida)
+$osso           = &invamount (Osso)
+$mandibula      = &invamount (Mandíbula Horrenda)
+if ( $ervaAzul < 6 ) goto Erva
+if ( $ervaAzul >= 6 && $unhaApodrecida < 10 ) goto Unha
+if ( $ervaAzul >= 6 && $unhaApodrecida >= 10 && $osso < 10 ) goto Osso
+if ( $ervaAzul >= 6 && $unhaApodrecida >= 10 && $osso >= 10 && $mandibula < 10 ) goto Mandibula
+
+
+
+
+:Erva
+log Pegar Erva
+[
+do conf lockMap cmd_fild02
+do mconf 1266 0 0 0
+do mconf 1073 0 0 0
+do mconf 1254 0 0 0
+do mconf Cornutus 0 0 0
+do mconf 1074 0 0 0
+do mconf 1391 0 0 0
+do conf attackAuto_inLockOnly 1
+call voltarAtacar
+log =================================
+log Estou coletando ERVA AZUL pra
+log quest de arruaceiro
+log =================================
+]
+stop
+
+
+
+
+:Unha
+log Pegar Unha
+[
+do conf lockMap pay_dun00
+do mconf 1005 0 0 0
+do mconf 1031 0 0 0
+do mconf 1078 0 0 0
+do mconf 1084 0 0 0
+do conf attackAuto_inLockOnly 1
+call voltarAtacar
+log ================================
+log Estou coletando UNHA APODRECIDA
+log pra quest de arruaceiro
+log ================================
+]
+stop
+
+
+
+
+:Osso
+log Pegar Osso
+[
+do conf lockMap pay_dun01
+do mconf Drainliar 0 0 0
+do mconf Eggyra 0 0 0
+do mconf 1084 0 0 0
+do mconf 1078 0 0 0
+do conf attackAuto_inLockOnly 1
+do conf route_randomWalk 1
+call voltarAtacar
+log ==============================
+log Estou coletando OSSO para
+log a quest de arruaceiro
+log ==============================
+]
+stop
+
+
+
+
+:Mandibula
+log Pegar mandibula
+[
+do conf lockMap pay_dun00
+do mconf 1005 0 0 0
+do mconf 1031 1 0 0
+do mconf 1078 0 0 0
+do mconf 1084 0 0 0
+do mconf 1076 0 0 0
+do conf attackAuto_inLockOnly 1
+do conf route_randomWalk 1
+call voltarAtacar
+log ==============================================
+log Estou coletando MANDIBULA pra quest de arruaceiro
+log Recomendado comprar esse item em vez de dropar
+log ==============================================
+]
+stop
+}
+}
+
+
+automacro virarArruaceiro_etapa3_tenhoOsItensIrProNpc {
+InInventory "Blue Herb" >= 6
+InInventory "Decayed Nail" >= 10
+InInventory "Skel-Bone" >= 10
+InInventory "Horrendous Mouth" >= 10
+QuestActive 2018
+Zeny > 9999
+NpcNotNear /Smith/
+exclusive 1
+call {
+lock virarArruaceiro3
+do conf -f questArruaceiro peguei
+log Vamos No NPC já temos os Itens...
+call pararDeAtacar
+do conf lockMap none
+do conf attackAuto_inLockOnly 0
+do mconf 1266 1 0 0
+do mconf 1073 1 0 0
+do mconf 1254 1 0 0
+do mconf Cornutus 1 0 0
+do mconf 1074 1 0 0
+do mconf 1391 1 0 0
+do mconf 1005 1 0 0
+do mconf 1031 1 0 0
+do mconf 1078 1 0 0
+do mconf 1084 1 0 0
+do mconf 1076 1 0 0
+lock virarArruaceiro3
+do move in_rogue &rand(370,373) &rand(20,24)
+}
+}
+
+
+automacro virarArruaceiro_etapa3_tenhoOsItensbugged {
+InInventory "Blue Herb" >= 6
+InInventory "Decayed Nail" >= 10
+InInventory "Skel-Bone" >= 10
+InInventory "Horrendous Mouth" >= 10
+QuestActive 2018
+	overrideAI 1
+Zeny < 10000
+exclusive 1
+call {
+log por algum motivo, o bot não tem nem os 10k de zeny pra fazer a quest
+log tentando resolver isso
+release c_arru
+
+}
+}
+
+automacro virarArruaceiro_etapa3_tenhoOsItens {
+InInventory "Blue Herb" >= 6
+InInventory "Decayed Nail" >= 10
+InInventory "Skel-Bone" >= 10
+InInventory "Horrendous Mouth" >= 10
+NpcNear /Smith/
+Zeny > 9999
+QuestActive 2018
+exclusive 1
+call {
+lock virarArruaceiro3
+do conf lockMap none
+do talk $.NpcNearLastBinId #Smith
+do talk $.NpcNearLastBinId #Smith
+do talk $.NpcNearLastBinId #Smith
+lock virarArruaceiro3
+}
+}
+automacro virarArruaceiro_etapa3_coletarItens2 {
+JobID 6 #gatuno
+QuestActive 2019
+exclusive 1
+ConfigKeyNot questArruaceiro peguei
+timeout 100
+call  {
+do pconf all 1
+do iconf 511 10 1 0 #Green Herb
+do iconf 910 10 1 0 #Garlets
+do iconf 926 10 1 0 #Snake Scale
+do iconf 964 10 1 0 #Crab Shell
+$greenHerbs    = &invamount (Green Herb)
+$garlets       = &invamount (Garlet)
+$snakeScale = &invamount (Snake Scale)
+$crabShell          = &invamount (Crab Shell)
+if ( $greenHerbs < 11 ) goto Erva
+if ( $greenHerbs >= 6 && $garlets < 10 ) goto Garlets
+if ( $greenHerbs >= 6 && $garlets >= 10 && $snakeScale < 10 ) goto SnakeScale
+if ( $greenHerbs >= 6 && $garlets >= 10 && $snakeScale >= 10 && $crabShell < 10 ) goto CrabShell
+
+
+:Erva
+log Pegar Erva Verde
+[
+do move morocc 156 98
+do talknpc 156 97 c c c r2 c c c r1 c c 
+do move prontera 29 205
+do talknpc 29 207 c c r2 c c c r c c3 c c c 
+do ai on
+do conf lockMap gef_fild07
+do mconf 1266 0 0 0
+do mconf all 0 0 0
+do mconf All 0 0 0
+do mconf Fabre 1 0 1
+do mconf Roda Frog 1 0 1
+do pconf all 1
+do conf attackAuto_inLockOnly 1
+call voltarAtacar
+log =================================
+log Estou coletando Erva Verde pra
+log quest de arruaceiro
+log =================================
+]
+stop
+
+
+
+
+:Garlets
+log Pegar Garlets 
+[
+do conf lockMap gef_fild13
+do mconf Ambernite 1 0 1
+do conf attackAuto_inLockOnly 1
+call voltarAtacar
+log ================================
+log Estou coletando Garlets
+log pra quest de arruaceiro
+log ================================
+]
+stop
+
+
+
+
+:SnakeScale
+log Pegar Snake Scale
+[
+do conf lockMap moc_fild02
+do mconf Boa 1 0 1
+do conf attackAuto_inLockOnly 1
+do conf route_randomWalk 1
+call voltarAtacar
+log ==============================
+log Estou coletando Snake Scale para
+log a quest de arruaceiro
+log ==============================
+]
+stop
+
+
+
+
+:CrabShell
+log Pegar Crab Shell
+[
+do conf lockMap cmd_fild07
+do mconf all 1 0 1
+do conf attackAuto_inLockOnly 1
+do conf route_randomWalk 1
+call voltarAtacar
+log ==============================================
+log Estou coletando Crab Shell pra quest de arruaceiro
+log ==============================================
+]
+stop
+}
+}
+
+
+automacro virarArruaceiro_etapa3_tenhoOsItensIrProNpc2 {
+InInventory "Green Herb" >= 10
+InInventory "Snake Scale" >= 10
+InInventory "Garlets" >= 10
+InInventory "Crab Shell" >= 10
+QuestActive 2019
+Zeny > 9999
+NpcNotNear /Smith/
+exclusive 1
+call {
+lock virarArruaceiro3
+do conf -f questArruaceiro peguei
+log Vamos No NPC já temos os Itens...
+call pararDeAtacar
+do conf lockMap none
+do conf attackAuto_inLockOnly 0
+do mconf 1266 1 0 0
+do mconf 1073 1 0 0
+do mconf 1254 1 0 0
+do mconf Cornutus 1 0 0
+do mconf 1074 1 0 0
+do mconf 1391 1 0 0
+do mconf 1005 1 0 0
+do mconf 1031 1 0 0
+do mconf 1078 1 0 0
+do mconf 1084 1 0 0
+do mconf 1076 1 0 0
+lock virarArruaceiro3
+do move in_rogue &rand(370,373) &rand(20,24)
+}
+}
+
+
+automacro virarArruaceiro_etapa3_tenhoOsItensbugged2 {
+InInventory "Green Herb" >= 10
+InInventory "Snake Scale" >= 10
+InInventory "Garlets" >= 10
+InInventory "Crab Shell" >= 10
+QuestActive 2019
+Zeny < 10000
+exclusive 1
+call {
+log por algum motivo, o bot não tem nem os 10k de zeny pra fazer a quest
+log tentando resolver isso
+release c_arru
+
+}
+}
+
+
+
+
+automacro virarArruaceiro_etapa3_tenhoOsItens2 {
+InInventory "Green Herb" >= 10
+InInventory "Snake Scale" >= 10
+InInventory "Garlets" >= 10
+InInventory "Crab Shell" >= 10
+NpcNear /Smith/
+Zeny > 9999
+QuestActive 2019
+exclusive 1
+call {
+lock virarArruaceiro3
+do conf lockMap none
+call pararDeAtacar
+do talk $.NpcNearLastBinId #Smith
+do talk $.NpcNearLastBinId #Smith
+do talk $.NpcNearLastBinId #Smith
+lock virarArruaceiro3
+}
+}
+
+
+
+
+automacro virarArruaceiro_etapa3_coletarItens3 {
+JobID 6 #gatuno
+QuestActive 2020
+exclusive 1
+ConfigKey questArruaceiro pegarItens
+timeout 100
+call  {
+pause 1 
+do pconf all 1
+do iconf Yellow Herb 10 1 0  #Yellow Herb
+do iconf Shell 10 1 0  #Shell
+do iconf Grasshopper's Leg 10 1 0  #Grasshopper's Leg
+do iconf Bear's Footskin 10 1 0  #Bear's Footskin
+$yellowHerb    = &invamount (Yellow Herb)
+$shell       = &invamount (Shell)
+$grasshopper = &invamount (Grasshopper's Leg)
+$bearFoot          = &invamount (Bear's Footskin)
+if ( $yellowHerb => 10 ) goto Erva
+if ( $yellowHerb >= 10 && $shell < 10 ) goto Shell
+if ( $yellowHerb >= 10 && $shell >= 10 && $grasshopper < 10 ) goto Grasshopper
+if ( $yellowHerb >= 10 && $shell >= 10 && $grasshopper >= 10 && $bearFoot < 10 ) goto bearFoot
+if ( $yellowHerb >= 10 && $shell >= 10 && $grasshopper >= 10 && $bearFoot >= 10 ) goto Ok
+
+
+:Erva
+log Pegar Erva Amarela
+[
+do conf lockMap moc_fild12
+do mconf Yellow Plant 1 0 1
+do mconf 1391 2 0 1
+pause 1
+do pconf all 1
+do conf attackAuto_inLockOnly 1
+do move moc_fild12
+call voltarAtacar
+log =================================
+log Estou coletando Erva Amarela pra
+log quest de arruaceiro
+log =================================
+]
+stop
+
+
+
+
+:Shell
+log Pegar Shell 
+[
+do conf lockMap moc_fild13
+do mconf 1042 1 0 1
+do conf attackAuto_inLockOnly 1
+do move moc_fild13
+call voltarAtacar
+log ================================
+log Estou coletando Shell
+log pra quest de arruaceiro
+log ================================
+]
+stop
+
+
+
+
+:Grasshopper
+log Pegar Grasshopper's Leg
+[
+do move prt_fild07
+do conf lockMap prt_fild07
+do mconf Rocker 1 0 1
+do conf attackAuto_inLockOnly 1
+do conf route_randomWalk 0
+
+call voltarAtacar
+log ==============================
+log Estou coletando Grasshopper's Leg para
+log a quest de arruaceiro
+log ==============================
+]
+stop
+
+
+
+
+:bearFoot
+log Pegar Bear's Footskin
+[
+do conf lockMap pay_fild07
+do mconf Bigfoot 1 0 1
+do conf attackAuto_inLockOnly 1
+do conf route_randomWalk 1
+do move pay_fild07
+call voltarAtacar
+log ==============================================
+log Estou coletando Bear's Footskin pra quest de arruaceiro
+log ==============================================
+]
+stop
+
+
+:Ok
+do conf questArruaceiro itensOk
+stop
+
+
+
+
+}
+}
+
+
+automacro virarArruaceiro_etapa3_tenhoOsItensIrProNpc3 {
+InInventory "Yellow Herb" >= 10
+InInventory "Grasshopper's Leg" >= 10
+InInventory "Shell" >= 10
+InInventory "Bear's Footskin" >= 10
+QuestActive 2020
+exclusive 1
+Zeny > 9999
+NpcNotNear /Smith/
+ConfigKey questArruaceiro itensOk
+timeout 600
+call {
+log Vamos No NPC já temos os Itens...
+call pararDeAtacar
+do conf lockMap none
+do conf attackAuto_inLockOnly 0
+do mconf 1266 1 0 0
+do mconf 1073 1 0 0
+do mconf 1254 1 0 0
+do mconf Cornutus 1 0 0
+do mconf 1074 1 0 0
+do mconf 1391 1 0 0
+do mconf 1005 1 0 0
+do mconf 1031 1 0 0
+do mconf 1078 1 0 0
+do mconf 1084 1 0 0
+do mconf 1076 1 0 0
+do move in_rogue &rand(370,373) &rand(20,24)
+}
+}
+
+
+automacro virarArruaceiro_etapa3_tenhoOsItensbugged3 {
+InInventory "Yellow Herb" >= 10
+InInventory "Grasshopper's Leg" >= 10
+InInventory "Shell" >= 10
+InInventory "Bear's Footskin" >= 10
+QuestActive 2020
+Zeny < 10000
+exclusive 1
+timeout 600
+call {
+log por algum motivo, o bot não tem nem os 10k de zeny pra fazer a quest
+log tentando resolver isso
+release c_arru
+
+}
+}
+
+
+
+
+automacro virarArruaceiro_etapa3_tenhoOsItens3 {
+InInventory "Yellow Herb" >= 10
+InInventory "Grasshopper's Leg" >= 10
+InInventory "Shell" >= 10
+InInventory "Bear's Footskin" >= 10
+NpcNear /Smith/
+Zeny > 9999
+exclusive 1
+QuestActive 2020
+timeout 600
+call {
+do conf lockMap none
+call pararDeAtacar
+do talk $.NpcNearLastBinId #Smith
+
+do talk $.NpcNearLastBinId #Smith
+
+do talk $.NpcNearLastBinId #Smith
+}
+}
+
+
+
+
+
+
+automacro virarArruaceiro_etapa4 {
+JobID 6 #gatuno
+exclusive 1
+JobLevel 50
+    CurrentHP >= 80%
+priority 5 #prioridade baixa
+delay 5
+QuestActive 2022, 2023, 2024
+call {
+if ($.map = in_rogue && $.pos ~ 169 34, 246 25, 164 106) {
+    [
+    log ==================================
+log essa macro está se ativando no momento errado
+log reporte esse bug ao criador da macro
+log ==================================
+]
+stop
+}
+do conf lockMap none
+        do stand
+
+        log sua posição atual é: $.map $.pos
+switch ($.QuestActiveLastID) {
+case (= 2022) { #opção 1
+do conf -f questArruaceiro 1
+call irAteLocal_questArruaceiro "cmd_fild09 107 195" "1" "2" "1" "0" #local e respostas apropriadas
+}
+case (= 2023) { #opção 2
+do conf -f questArruaceiro 2
+call irAteLocal_questArruaceiro "cmd_fild04 304 180" "2" "1" "1" "2" #local e respostas apropriadas
+}
+case (= 2024) { #opção 3
+do conf -f questArruaceiro 3
+call irAteLocal_questArruaceiro "cmd_fild09 335 143" "0" "2" "4" "0" #local e respostas apropriadas
+}
+}
+}
+}
+
+
+macro irAteLocal_questArruaceiro {
+    [
+    log ================================
+    log =Mapa pra qual está se movendo: '$.param[0]'
+    log =Sequência de conversação: '$.param[1] $.param[2] $.param[3] $.param[4]'
+    log ================================
+    ]
+    ## $.param[0] tem como valor cidade e coordenadas
+    ## $.param[1] até $.param[4] tem como valor as respostas corretas pra entrar na casa
+
+
+do mconf Sea Otter -1 0 0
+do pconf all 0
+do conf attackAuto_inLockOnly 0
+do conf attackAuto 1
+do move $.param[0]
+
+do talk resp $.param[1]
+
+do talk resp $.param[2]
+
+do talk resp $.param[3]
+
+do talk resp $.param[4]
+
+do mconf Sea Otter 1 0 0
+do pconf all 1
+do conf attackAuto -1
+set exclusive 0
+pause 5
+}
+
+
+automacro virarArruaceiro_etapa5_DentroDaCasa {
+JobLevel 50
+IsInMapAndCoordinate in_rogue 169 34, in_rogue 246 25, in_rogue 164 106
+exclusive 1
+priority -5
+call {
+switch ($.pos) {
+case (= 169 34) {
+do talknpc 160 34 c c c c c c c c c r0 c c c c c c c c c c c
+}
+case (= 246 25) {
+do move in_rogue 244 33
+do talknpc 244 39 c c c c c c c c r0 c c c c c c c c c c c
+}
+case (= 164 106) {
+do move in_rogue 172 108
+do talknpc 177 109 c c c c c c c c c c c r0 c c c c c c c c c c c c
+}
+}
+}
+}
+
+
+automacro virarArruaceiro_etapa6_labirinto {
+JobLevel 50
+exclusive 1
+IsInMapAndCoordinate in_rogue 15 105
+macro_delay 0.5
+call {
+#ahhhh o labirinto.... o bixin vai morrer algumas vezes aqui viu... ou não kkkk
+do conf attackAuto -1
+do conf itemsTakeAuto 0
+do conf lockMap none
+log ================================
+log Iniciando Labirinto
+log ================================
+do move 23 105
+do move 23 334
+#preguiça de fazer o resto das coordenadas específicas
+do move in_rogue 359 117
+}
+}
+
+
+automacro virarArruaceiro_etapa6_morreuNoLabirinto_hpAlto {
+QuestActive 2026
+ConfigKeyNot questArruaceiro none
+JobLevel 50
+NotInMap in_rogue
+CurrentHP >= 80%
+exclusive 1
+call {
+do stand
+[
+log ==================================================
+log Já esou com hp alto, vou retentar o labirinto
+log ==================================================
+]
+do conf lockMap none
+log a opção de caminho é a &config(questArruaceiro)
+# se vc tiver morrido no labirindo, essa macro que vai fazer voce ir la tentar denovo
+# vai pegar qual o caminho certo e seguir ele
+switch ( &config(questArruaceiro) ) {
+case (= 1) call irAteLocal_questArruaceiro "cmd_fild09 107 195" "1" "2" "1" "0"  #local e respostas apropriadas
+case (= 2) call irAteLocal_questArruaceiro "cmd_fild04 304 180" "2" "1" "1" "2"  #local e respostas apropriadas
+case (= 3) call irAteLocal_questArruaceiro "cmd_fild09 335 143" "0" "2" "4" "0"  #local e respostas apropriadas
+else {
+[
+log ================================
+log =a macro deveria ter escolhido um caminho, mas não conseguiu, isso é um bug
+log ================================
+]
+stop
+}
+}
+log Indo até o local &config(questArruaceiro)
+}
+}
+
+
+automacro virarArruaceiro_etapa6_morreuNoLabirinto_hpBaixo {
+QuestActive 2026
+JobLevel 50
+NotInMap in_rogue
+CurrentHP < 80%
+exclusive 1
+timeout 120
+call {
+[
+log ====================================
+log MORRI TENTANpauseASSAR PELO LABIRINTO
+log HP ATUAL: $.CurrentHPLastPercent%
+log ESPERANDO HP FICAR ACIMA DE 80%
+log ====================================
+]
+
+			do conf buyorangepot.disabled 0
+			do conf buyredpot.disabled 0
+			do autosell
+			do iconf all 0 0 1
+			do sit
+if ( &config (sitAuto_hp_upper) != 80 ) {
+do conf sitAuto_hp_lower 20
+do conf sitAuto_hp_upper 80
+
+}
+}
+}
+
+
+automacro virarArruaceiro_etapaFinal {
+JobLevel 50
+#IsInMapAndCoordinate in_rogue 359 117
+NpcNear /Rogue Guildsman/
+InMap in_rogue
+QuestActive 2026
+exclusive 1
+call {
+log ===========================
+log PASSEI PELO LABIRINTO!!!!
+log ===========================
+do move in_rogue 369 119
+do talknpc 363 122 c c c c c 
+do conf itemsTakeAuto 1
+do conf questArruaceiro true
+}
+}
+
+
+automacro virarArruaceiro_etapaFinal_Alternativo {
+JobLevel 50
+#IsInMapAndCoordinate in_rogue 378 113
+NpcNear /Homem Assustador/
+InMap in_rogue
+QuestActive 2026
+exclusive 1
+call {
+log ===========================
+log PASSEI PELO LABIRINTO!!!!
+log ===========================
+do move in_rogue 369 119
+do talknpc 363 122 c c c c c c c c c c 
+do conf itemsTakeAuto 1
+do conf questArruaceiro true
+}
+}
+
+
+automacro jaSouArruaceiro {
+JobID 17 #arruaceiro
+ConfigKey questArruaceiro true
+exclusive 1
+call {
+do eq &inventory(Gladius[3])
+do conf skillsAddAuto 1
+do conf skillsAddAuto_list RG_SNATCHER 10, RG_STEALCOIN 10, RG_BACKSTAP 4, RG_TUNNELDRIVE 5, RG_RAID 5, RG_INTIMIDATE 5, RG_PLAGIARISM 10
+call pararDeAtacar
+do conf virarArruaceiro none
+do conf questArruaceiro none
+do conf QuestPart drop
+do mconf all 1 0 1
+do iconf all 0 0 1
+do conf attackLooters 1
+do conf statsAddAuto_dontUseBonus 1
+do conf statsAddAuto_list 99 agi, 45 dex, 50 vit, 30 str
+do conf attackAuto_inLockOnly 1
+$check = GetIndexAndEquipped("rightHand", 1220) #Gladius[3]
+if ($check != -1) do eq $check
+do conf QuestPart drop
+do conf questArruaceiro false
+			do conf lockMap cmd_fild02
+			do conf buyorangepot.disabled 0
+			do conf buyredpot.disabled 0
+			do conf buybutterfly.disabled 0
+			do conf buyflywing.disabled 0
+			do conf buyawakpot.disabled 0
+			do conf route_teleport 1
+			do conf route_maxWarpFee none
+			do iconf 1220 1 0 0
+			do mconf all 1
+call voltarAtacar
+}
+}
+
+
+
+
+#
+#
+#
+# FIM DA QUEST PRA VIRAR ARRUACEIRO
+#
+
+
+
+
+
+
+macro pararDeAtacar {
+[
+do conf route_randomWalk 0
+do conf attackAuto 1
+]
+}
+
+
+
+
+macro voltarAtacar {
+[
+do conf route_randomWalk 1
+do conf attackAuto 2
+]
+}
+
+
+
+
+
+
+sub GetIndexAndEquipped {
+my ($type, $id) = @_;
+my $Item = $char->inventory->getByNameID($id);
+if ($Item eq "" ) {
+message "Erro: ou a ID do item está incorreta, ou você não possui esse equipamento.\n";
+return -1;
+}
+my $EquipIndex = $Item->{binID};
+if (exists $char->{equipment}{$type}) {
+my $equipItem = $char->{equipment}{$type};
+if ($equipItem->{nameID} == $id) {
+message "Erro: Esse equip já está equipado.\n";
+return -1;
+} else {
+return $EquipIndex;
+}
+} else {
+return $EquipIndex;
+}
+}
+
+
+
+
+sub GetNamenyNameID {
+my $name = $items_lut{$_[0]};
+return $name;
+}
+
+
+sub nextMap {
+my $map = $_[0];
+if ($map =~ /^new_(\d)-(\d)$/) {
+return "new_".$1."-".($2+1);
+} else {
+return 0;
+}
+}
+
+# fim da macro

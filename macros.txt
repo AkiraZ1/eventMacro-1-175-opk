@@ -1,0 +1,16 @@
+automacro Hiding { 
+exclusive 1 
+priority -5
+run-once 1
+delay 2
+spell Water Ball
+call AutoHide
+}
+
+macro AutoHide { 
+do ss 51
+pause 1
+do ss 51
+release Hiding
+}
+
